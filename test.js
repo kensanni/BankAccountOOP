@@ -46,4 +46,16 @@ describe("Bank Account class", () => {
             chai(account3.withdraw(911)).equal(account3.checkBalance());
         });
     });
+    describe('withdraw method works when amount is > balance', ()=>{
+        it('for super class', ()=>{
+            chai(account1.withdraw(36700)).equal('Sorry you only have ' + account1.checkBalance()+ ' in your account');
+        });
+        it('for interestAccount class', ()=>{
+            chai(account2.withdraw(64500)).equal('Sorry you only have ' + account2.checkBalance()+ ' in your account');
+        });
+        it('for chargingAccount class', ()=>{
+            chai(account3.withdraw(91100)).equal('Sorry you do not have sufficient funds');
+        });
+    })     
+
 })
