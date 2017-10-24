@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {
+    "mocha": "^4.0.1"
   }
 }
