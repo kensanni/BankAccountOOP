@@ -24,4 +24,15 @@ describe("Bank Account class", () => {
             chai(account3).eql( { balance: 3000, fee: 3});
         });
     });
+    describe('deposit and checkBalance works', ()=>{
+        it('for super class', ()=>{
+            chai(account1.deposit(500)).equal(account1.checkBalance());
+        });
+        it('for interestAccount class', ()=>{
+            chai(account2.deposit(800)).equal(account2.checkBalance());
+        });
+        it('for chargingAccount class', ()=>{
+            chai(account3.deposit(900)).equal(account3.checkBalance());
+        });
+    }); 
 })
