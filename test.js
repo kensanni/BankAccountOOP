@@ -35,4 +35,15 @@ describe("Bank Account class", () => {
             chai(account3.deposit(900)).equal(account3.checkBalance());
         });
     }); 
+    describe('withdraw method works', ()=>{
+        it('for super class', ()=>{
+            chai(account1.withdraw(367)).equal(account1.checkBalance());
+        });
+        it('for interestAccount class', ()=>{
+            chai(account2.withdraw(645)).equal(account2.checkBalance());
+        });
+        it('for chargingAccount class', ()=>{
+            chai(account3.withdraw(911)).equal(account3.checkBalance());
+        });
+    });
 })
